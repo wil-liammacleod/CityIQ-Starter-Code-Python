@@ -6,12 +6,12 @@ credentials = {
         "metadata":"{yourMetaDataURL}",
         "event":"{yourEventServiceURL}",
         "websocket": "wss://{yourWebSocketURL}", 
-        "developer": "{yourClientID}:{yourClientSecret}",
-        "parking": "{yourParkingPredixZoneID}",
-        "environment": "{yourEnvironmentPredixZoneID}",
-        "pedestrian": "{yourPedestrianPredixZoneID}",
-        "traffic": "{yourTrafficPredixZoneID}",
-        "bicycle": "{yourBicyclePredixZoneID}",
-        "bbox": "{lat}:{long},{lat}:{long}"
+        "developer": "Hackathon.CITM.Hamilton:Wm,yb&G`KB\\2}d<s",
+        "parking": "HAMILTON-IE-PARKING",
+        "environment": "HAMILTON-IE-ENVIRONMENTAL",
+        "pedestrian": "HAMILTON-IE-PEDESTRIAN",
+        "traffic": "HAMILTON-IE-TRAFFIC",
+        "bicycle": "HAMILTON-IE-BICYCLE",
+        "bbox": "-90:-180,90:180"
     }
 }
