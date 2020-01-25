@@ -1,5 +1,12 @@
 # CityIQ Python Starter Code
 
+
+$ pip install pipenv
+
+$ pipenv shell
+
+$ pip install cityiq
+
 This starter code written with python3 is meant to demonstrate how to get events using the REST API (demo.py) and the WebSocket (demoWebsocket.py).  
 All REST queries are made using the cityiq.py script.
 
