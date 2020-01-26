@@ -14,37 +14,6 @@ print("Getting the token")
 myCIQ = CityIq("City")
 myCIQ.fetchToken()
 
-# print("====================================================================================")
-# print("++++++++++Getting Parking Data++++++++++++")
-
-# print("Getting Parking Metadata")
-# # gettting assets - assets with PKIN events, page 0 with 10 assets per page
-# print("Getting Assets")
-# myCIQ.fetchMetadata("assets","parking","eventTypes:PKIN",page=0, size=10)
-# assets = myCIQ.getAssets()
-# # set a random asset in the list for future use
-# randAssetUid = assets[0]["assetUid"]
-
-# print("-------------------------------------------")
-# print("Get events for assetUid "+randAssetUid)
-# # getting events
-# myCIQ.fetchEvents("assets", randAssetUid, "PKIN", startTime, endTime, pageSize=10)
-# assetEvents = myCIQ.getEvents()
-# # printing events
-# print(json.dumps(assetEvents,indent=4,sort_keys=True))
-# # save a random locationUid for event querying to follow
-# print()
-# print(len(assetEvents))
-# print()
-# randLocationUid = assetEvents[0]["locationUid"]
-
-# print("-------------------------------------------")
-# print("Get events for locationUid "+randLocationUid)
-# # getting events
-# myCIQ.fetchEvents("locations", randLocationUid, "PKIN", startTime, endTime, pageSize=1)
-# locationEvents = myCIQ.getEvents()
-# print(json.dumps(locationEvents,indent=4,sort_keys=True))
-
 print("====================================================================================")
 print("++++++++++Getting Traffic Data++++++++++++")
 
@@ -59,69 +28,13 @@ randAssetUid = assets[0]["assetUid"]
 print("-------------------------------------------")
 print("Get events for assetUid "+randAssetUid)
 # getting events
-myCIQ.fetchEvents("assets", randAssetUid, "TFEVT", startTime, endTime, pageSize=1)
+myCIQ.fetchEvents("assets", randAssetUid, "TFEVT", startTime, endTime, pageSize=100)
 assetEvents = myCIQ.getEvents()
 # printing events
-print(json.dumps(assetEvents,indent=4,sort_keys=True))
+data = json.dumps(assetEvents,indent=4,sort_keys=True)
+for i in range(0,99):
+    print(i)
+    print(json.dumps(assetEvents[i]["measures"]["speed"],indent=4,sort_keys=True))
 
-
-
-# print("====================================================================================")
-# print("++++++++++Getting Pedestrian Data++++++++++++")
-
-# print("Getting Pedestrian Metadata")
-# # gettting assets - assets with PEDEVT events, page 0 with 10 assets per page
-# print("Getting Assets")
-# myCIQ.fetchMetadata("assets","pedestrian","eventTypes:PEDEVT",page=0, size=10)
-# assets = myCIQ.getAssets()
-# # set a random asset in the list for future use
-# randAssetUid = assets[0]["assetUid"]
-
-# print("-------------------------------------------")
-# print("Get events for assetUid "+randAssetUid)
-# # getting events
-# myCIQ.fetchEvents("assets", randAssetUid, "PEDEVT", startTime, endTime, pageSize=1)
-# assetEvents = myCIQ.getEvents()
-# # printing events
-# print(json.dumps(assetEvents,indent=4,sort_keys=True))
-
-
-# print("====================================================================================")
-# print("++++++++++Getting Environmental Data++++++++++++")
-
-# print("Getting Environmental Metadata")
-# # gettting assets - assets with Temperature events, page 0 with 10 assets per page
-# print("Getting Assets")
-# myCIQ.fetchMetadata("assets","environment","eventTypes:TEMPERATURE",page=0, size=10)
-# assets = myCIQ.getAssets()
-# # set a random asset in the list for future use
-# randAssetUid = assets[0]["assetUid"]
-
-# print("-------------------------------------------")
-# print("Get events for assetUid "+randAssetUid)
-# # getting events
-# myCIQ.fetchEvents("assets", randAssetUid, "TEMPERATURE", startTime, endTime, pageSize=1)
-# assetEvents = myCIQ.getEvents()
-# # printing events
-# print(json.dumps(assetEvents,indent=4,sort_keys=True))
-
-# print("====================================================================================")
-# print("++++++++++Getting Bicycle Data++++++++++++")
-
-# print("Getting Bicycle Metadata")
-# # gettting assets - assets with TFEVT events, page 0 with 10 assets per page
-# print("Getting Assets")
-# myCIQ.fetchMetadata("assets","bicycle","eventTypes:BICYCLE",page=0, size=10)
-# assets = myCIQ.getAssets()
-# # set a random asset in the list for future use
-# randAssetUid = assets[0]["assetUid"]
-
-# print("-------------------------------------------")
-# print("Get events for assetUid "+randAssetUid)
-# # getting events
-# myCIQ.fetchEvents("assets", randAssetUid, "BICYCLE", startTime, endTime, pageSize=1)
-# assetEvents = myCIQ.getEvents()
-# # printing events
-# print(json.dumps(assetEvents,indent=4,sort_keys=True))
-
+myCIQ.
 

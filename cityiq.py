@@ -141,6 +141,7 @@ class CityIq(object):
     def getEvents(self):
         return self.events
 
+
 # for testing purposes
 def main(args):
     # use for testing, call above functions here to execute from command line
