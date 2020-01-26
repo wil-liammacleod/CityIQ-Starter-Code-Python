@@ -5,7 +5,7 @@ import json
 
 # set time frame for use when querying for events (epoch time in milliseconds)
 endTime = int(time.time())*1000 # time when demo.py is run
-startTime = endTime-(10*3600000) 
+startTime = endTime-(24*3600000) 
 
 print("====================================================================================")
 print('initiating demo')
