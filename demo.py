@@ -65,6 +65,7 @@ assetEvents = myCIQ.getEvents()
 print(json.dumps(assetEvents,indent=4,sort_keys=True))
 
 
+
 # print("====================================================================================")
 # print("++++++++++Getting Pedestrian Data++++++++++++")
 
