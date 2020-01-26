@@ -30,8 +30,8 @@ print("Get events for assetUid "+randAssetUid)
 # getting events
 myCIQ.fetchEvents("assets", randAssetUid, "TFEVT", startTime, endTime, pageSize=10000)
 assetEvents = myCIQ.getEvents()
+
 # printing events
-data = json.dumps(assetEvents,indent=4,sort_keys=True)
 for i in range(len(assetEvents)):
     speed = json.dumps(assetEvents[i]["measures"]["speed"],indent=4,sort_keys=True)
     if (speed != "0.0"):
