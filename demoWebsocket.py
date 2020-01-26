@@ -8,9 +8,9 @@ import json
 import websocket
 
 # # set the zone and websocket url
-zone = credentials.credentials["City"]["parking"]
+zone = credentials.credentials["City"]["traffic"]
 wsURL = credentials.credentials["City"]["websocket"]
-payload = '{"bbox": "33.077762:-117.663817,32.559574:-116.584410", "eventTypes":["PKIN","PKOUT"]}'
+payload = '{"bbox": "-90.077762:-117.663817,90.559574:116.584410", "eventTypes":["TFEVT"]}'
 
 def on_message(ws, message): 
     print(message)
