@@ -5,7 +5,7 @@ import json
 
 # set time frame for use when querying for events (epoch time in milliseconds)
 endTime = int(time.time())*1000 # time when demo.py is run
-startTime = endTime-(12*3600000) 
+startTime = endTime-(10*3600000) 
 
 print("====================================================================================")
 print('initiating demo')
@@ -28,12 +28,16 @@ randAssetUid = assets[0]["assetUid"]
 print("-------------------------------------------")
 print("Get events for assetUid "+randAssetUid)
 # getting events
-myCIQ.fetchEvents("assets", randAssetUid, "TFEVT", startTime, endTime, pageSize=100)
+myCIQ.fetchEvents("assets", randAssetUid, "TFEVT", startTime, endTime, pageSize=10000)
 assetEvents = myCIQ.getEvents()
 # printing events
 data = json.dumps(assetEvents,indent=4,sort_keys=True)
-for i in range(0,99):
-    print(i)
-    print(json.dumps(assetEvents[i]["measures"]["speed"],indent=4,sort_keys=True))
+for i in range(0,9999):
+    speed = json.dumps(assetEvents[i]["measures"]["speed"],indent=4,sort_keys=True)
+    if (speed != "0.0"):
+        timest = json.dumps(assetEvents[i]["timestamp"],indent=4,sort_keys=True)
+        direction = json.dumps(assetEvents[i]["measures"]["direction"],indent=4,sort_keys=True)
+
+        print(i, "\t",speed,"\t",direction, "\t", timest )
 
 
