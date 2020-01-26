@@ -33,7 +33,10 @@ assetEvents = myCIQ.getEvents()
 # printing events
 print(json.dumps(assetEvents,indent=4,sort_keys=True))
 # save a random locationUid for event querying to follow
-randLocationUid = assetEvents[0]["locationUid"]
+print()
+print(len(assetEvents))
+print()
+#randLocationUid = assetEvents[0]["locationUid"]
 
 print("-------------------------------------------")
 print("Get events for locationUid "+randLocationUid)

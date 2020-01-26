@@ -3,9 +3,9 @@ credentials = {
     "City": { # city key is for clients with multiple tenant. it is recommended to leave the structure as is.
         "name" :"hamilton",
         "uaa": "https://auth.aa.cityiq.io",
-        "metadata":"{yourMetaDataURL}",
-        "event":"{yourEventServiceURL}",
-        "websocket": "wss://{yourWebSocketURL}", 
+        "metadata":"https://hamilton.cityiq.io/api/v2/metadata/assets",
+        "event":"https://hamilton.cityiq.io/api/v2/event",
+        "websocket": "wss://websocket url/events", 
         "developer": "Hackathon.CITM.Hamilton:Wm,yb&G`KB\\2}d<s",
         "parking": "HAMILTON-IE-PARKING",
         "environment": "HAMILTON-IE-ENVIRONMENTAL",
