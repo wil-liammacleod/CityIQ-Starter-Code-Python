@@ -36,5 +36,4 @@ for i in range(0,99):
     print(i)
     print(json.dumps(assetEvents[i]["measures"]["speed"],indent=4,sort_keys=True))
 
-myCIQ.
 
